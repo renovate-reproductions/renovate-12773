@@ -1,0 +1,32 @@
+{
+  extends: [
+    // Same options as in "config:base", but without "group:monorepos" and
+    // "group:recommended".
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":ignoreUnstable",
+    ":prImmediately",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":updateNotScheduled",
+    ":automergeDisabled",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    ":prHourlyLimit2",
+    ":prConcurrentLimit20",
+    "helpers:disableTypesNodeMajor"
+  ],
+  packageRules: [
+    {
+      matchUpdateTypes: ["minor", "patch", "digest"],
+      groupName: "all-non-major",
+    },
+    {
+      matchUpdateTypes: ["major"],
+      groupName: "all-major",
+      stabilityDays: 5,
+      internalChecksFilter: "strict",
+    },
+  ],
+  dependencyDashboard: true,
+  rangeStrategy: "replace",
+}

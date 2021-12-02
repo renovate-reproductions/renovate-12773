@@ -23,7 +23,7 @@
     {
       matchUpdateTypes: ["major"],
       groupName: "all-major",
-      stabilityDays: 5,
+      stabilityDays: 30,
       internalChecksFilter: "strict",
     },
   ],

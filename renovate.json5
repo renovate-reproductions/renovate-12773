@@ -15,6 +15,7 @@
     ":prConcurrentLimit20",
     "helpers:disableTypesNodeMajor"
   ],
+  internalChecksFilter: "strict",
   packageRules: [
     {
       matchUpdateTypes: ["minor", "patch", "digest"],
@@ -23,8 +24,7 @@
     {
       matchUpdateTypes: ["major"],
       groupName: "all-major",
-      stabilityDays: 30,
-      internalChecksFilter: "strict",
+      stabilityDays: 30
     },
   ],
   dependencyDashboard: true,

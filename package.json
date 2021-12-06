@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "cypress": "^8.0.0",
-    "gatsby": "^3.0.0",
-    "lint-staged": "10.0.0",
+    "cypress": "^9.0.0",
+    "gatsby": "^4.0.0",
+    "lint-staged": "12.1.2",
     "postcss-preset-env": "7.0.0"
   }
 }
